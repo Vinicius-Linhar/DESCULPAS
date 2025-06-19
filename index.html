@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำขอโทษสำหรับอ้อน</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kanit:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <style>
+        body { font-family: 'Kanit', 'Poppins', sans-serif; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <header class="hero-section">
+            <img src="IMG_20250520_005709_308.jpg" alt="Foto da Aon sorrindo" class="hero-image">
+            <h1 class="main-title">อ้อน ยกโทษให้เค้าได้ไหม?</h1>
+            <p class="subtitle">เค้าไม่เคยอยากทำให้เธอเสียใจเลยนะ เธอคือทุกสิ่งทุกอย่างของเค้า</p>
+        </header>
+
+        <main>
+            <section class="message-section">
+                <div class="card">
+                    <h2>จากก้นบึ้งของหัวใจ...</h2>
+                    <p>
+                        อ้อน เค้าขอโทษนะที่ทำผิดไป มันอาจจะเป็นเรื่องทะเลาะกันเล็กๆ น้อยๆ แต่มันก็ทำให้เราสองคนเจ็บปวด เค้าขอยอมรับผิดและขอโทษเธอจากใจจริง ไม่มีอะไรมาเปลี่ยนแปลงความรักที่เค้ามีให้เธอและความพิเศษของเธอได้เลย เสียงของเธอ รอยยิ้มของเธอ ความอ่อนหวานของเธอ... ทั้งหมดนี้คือโลกทั้งใบของเค้า เค้าไม่อยากเสียเธอไปเลยจริงๆ
+                    </p>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2>ช่วงเวลาที่แสนงดงามของเรา</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="IMG_20250619_193744_199.jpg" alt="Foto da Aon feliz">
+                        <div class="caption">ผู้หญิงที่สวยที่สุดในโลก</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_20250619_193916_326.jpg" alt="Outra foto da Aon">
+                        <div class="caption">เมื่อมีเธออยู่ข้างๆ ที่ไหนก็สมบูรณ์แบบ</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_20250619_193747_481.jpg" alt="Foto de um momento especial">
+                        <div class="caption">เค้าชื่นชมในความน่าทึ่งของเธอ</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_20250619_191927_611.jpg" alt="Lembrança de um dia bom">
+                        <div class="caption">ยังจำช่วงเวลาแห่งความสุขของเราได้เสมอ</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_20250619_191941_174.jpg" alt="Foto de vocês juntos">
+                        <div class="caption">เค้าสัญญาว่าจะสร้างความทรงจำดีๆ แบบนี้อีกเยอะๆ</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_20250619_193859_808.jpg" alt="Foto inspiradora">
+                        <div class="caption">เธอคือปัจจุบันและอนาคตของเค้า</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="final-plea-section">
+                <div class="card">
+                    <img src="IMG_20250619_194240_303.webp" alt="Minha foto com olhar de arrependimento" class="my-photo">
+                    <h2>เธอยกโทษให้เค้าได้ไหม อ้อน?</h2>
+                    <p>เค้าสัญญาว่าจะดูแลเราให้ดีกว่านี้</p>
+                    <button id="forgive-button">ค่ะ เค้าให้อภัย ❤️</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>บางครั้งเค้าก็ทำตัวงี่เง่า แต่เค้าก็เป็นคนงี่เง่าที่รักเธอสุดหัวใจ ขอบคุณที่มีอยู่จริงนะ อ้อน</p>
+        </footer>
+    </div>
+
+    <audio id="background-music" src="audio/crush-beautiful.mp3" loop></audio>
+    <div class="music-controls">
+        <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+    </div>
+
+    <div id="hearts-rain-container" class="hidden">
+        <p>❤️ ฉันรักเธอ! ❤️</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

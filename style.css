@@ -1,0 +1,270 @@
+/* Definições Globais e Variáveis */
+:root {
+    --color-pink: #fde2e4;
+    --color-lilac: #e2d6f8;
+    --color-blue: #d1e3f8;
+    --text-dark: #4a4a4a;
+    --text-light: #6b6b6b;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --shadow: 0 8px 32px 0 rgba(105, 96, 122, 0.15);
+    --font-title: 'DM Serif Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* Estilo Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--color-pink), var(--color-lilac), var(--color-blue));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Wrapper principal do site */
+.site-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    opacity: 0; /* Começa invisível para animação de entrada */
+    transform: translateY(20px);
+}
+
+/* Estilos dos Títulos e Parágrafos */
+h1, h2 {
+    font-family: var(--font-title);
+    font-weight: 400;
+}
+p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Estilo do "Card" genérico */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Seção Hero */
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.hero-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+.main-title {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Seção da Mensagem */
+.message-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.message-section p {
+    font-size: 1.1rem;
+}
+
+/* Seção da Galeria */
+.gallery-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(105, 96, 122, 0.2);
+}
+.gallery-item img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item .caption {
+    padding: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+/* Seção do Pedido Final */
+.final-plea-section .my-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid white;
+}
+.final-plea-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+#forgive-button {
+    background: linear-gradient(45deg, #ff8a8a, #fca2a2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 100, 100, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#forgive-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 100, 100, 0.6);
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer p {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Pétalas e Corações (para JS) */
+.petal, .heart {
+    position: fixed;
+    top: -20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Para não atrapalhar cliques */
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.petal {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 C0 50, 50 100, 50 100 C50 100, 100 50, 50 0 Z" fill="%23f8c1cc"/></svg>');
+}
+
+/* Controle da Música */
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+#play-pause-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+#play-pause-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Animação Final (Chuva de Corações) */
+#hearts-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#hearts-rain-container p {
+    color: white;
+    font-size: 3rem;
+    font-family: var(--font-title);
+    text-shadow: 0 0 15px var(--color-pink);
+}
+.hidden {
+    display: none !important;
+    pointer-events: none;
+}
+.visible {
+    display: flex !important;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .site-wrapper {
+        padding: 20px 15px;
+    }
+    .main-title {
+        font-size: 2.8rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .hero-image {
+        width: 150px;
+        height: 150px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
